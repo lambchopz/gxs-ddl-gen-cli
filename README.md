@@ -1,8 +1,8 @@
 # gxs-ssh-ddl-gen
 
-Generates DDL to files in seedboxes.
+Generates DDL to files in gxs seedboxes.
 Establishes a ssh connection using an encrypted private ssh key.
-Seedbox implementation are separated into packages
+Using modules with Go 1.12
 
 Usage of ./gxs-ddl-gen_<os>_<version>:
   -filter string
