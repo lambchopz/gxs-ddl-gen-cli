@@ -4,7 +4,7 @@ Generates DDL to files in seedboxes.
 Establishes a ssh connection using an encrypted private ssh key.
 Seedbox implementation are separated into packages
 
-Usage of ./gxs-ddl-gen_v1.2.0:
+Usage of ./gxs-ddl-gen_<os>_<version>:
   -filter string
     	filter results in seedbox, wrap multi-word filters with quotes. ex: (./gxs-ddl-gen -filter="One Piece")
   -html string
@@ -20,4 +20,4 @@ Usage of ./gxs-ddl-gen_v1.2.0:
     	toggles generation of DDL links for media files. To disable (./gxs-ddl-gen -video=false) (default true)
 
 Example:
-./gxs-ddl-gen_v1.2.0 -filter="Darker than Black" -html=batch
+./gxs-ddl-gen_<os>_<version> -filter="Darker than Black" -html=batch
