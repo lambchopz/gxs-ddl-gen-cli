@@ -7,9 +7,8 @@ import (
 	"strconv"
 	"golang.org/x/crypto/ssh/terminal"
 	"syscall"
-	"gxs-ssh-ddl-gen/seedbox01"
-	"gxs-ssh-ddl-gen/seedbox02"
-	// "golang.org/x/crypto/ssh"
+	"github.com/lambchopz/gxs-ddl-gen-cli/seedbox01"
+	"github.com/lambchopz/gxs-ddl-gen-cli/seedbox02"
 )
 
 func main() {
