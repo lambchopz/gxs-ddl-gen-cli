@@ -1,4 +1,4 @@
-version=1.2.5
+version=1.2.6
 
 all: fmt linux windows macosx
 
@@ -17,7 +17,7 @@ fmt:
 
 
 clean:
-	rm -rf gxs-ddl-gen_v* gxs-ddl-gen_v*.exe
+	rm -rf gxs-ddl-gen_* gxs-ddl-gen_*.exe
 
 
 .PHONY: all linux windows fmt gxs-ddl-gen_v${version} gxs-ddl-gen_v${version}.exe clean

@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	const app_version = "1.2.5"
+	const app_version = "1.2.6"
 
 	version := flag.Bool("version", false, "print version of the app")
 	shorten := flag.Bool("shorten", true, "shortens generated DDL links using shorte. To disable (./gxs-ddl-gen -shorten=false")
