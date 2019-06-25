@@ -47,13 +47,14 @@ func establishSSHConnection(url_path string, secret []byte) string {
 	
 	key, err := ioutil.ReadFile(ssh_key_path)
 	if err != nil {
-		panic(err)
+		fmt.Println(os.Stderr, "Error: Key not found in path. Please provide a valid key.\n", err)
+		os.Exit(1)
 	}
 
 	signer, err := ssh.ParsePrivateKeyWithPassphrase(key, secret)
 	if err != nil {
-		fmt.Println("ssh.ParsePrivateKeyWithPassphrase()")
-		panic(err)
+		fmt.Println(os.Stderr, "Error: Invalid Secret.\n", err)
+		os.Exit(1)
 	}
 
 	config := &ssh.ClientConfig{
@@ -79,7 +80,7 @@ func establishSSHConnection(url_path string, secret []byte) string {
 
 	fmt.Println()
 	fmt.Println("Obtaining files from seedbox...")
-	output, err := session.Output("ls -l -h -R " + url_path)
+	output, err := session.Output("ls -l -h --si -R " + url_path)
 	if err != nil {
 		fmt.Println("session.Output")
 		panic(err)
